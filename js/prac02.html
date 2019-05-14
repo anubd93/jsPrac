@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>JS PRAC-01</title>
+	<title>Hello</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
@@ -18,12 +18,16 @@
 			<div id="show">
 				
 			</div>
+			<input id="codeText" type="text">
+			<button onclick="checked()">
+				CHECK
+			</button>
 			<script type="text/javascript">
 				// var a = 10;
 				// var b = 15;
 				// var helloWorld = a+b;
 				// var arr1 = [1,2,3,4,5];
-				// var arr2 = [4,5,6,7,8];
+				// var arr2 = [4,5,6,7,8]; 
 				// var getArr = arr1.concat(arr2);
 				// document.write(getArr);
 				// var colorArr = ["Green", "Red", "Blue", "White"];
@@ -44,6 +48,39 @@
 				// arr3.sort(arrSort);
 				// document.write("After Sorting"+"<br/>"+arr3.length);
 				// document.write("After Sorting"+"<br/>"+arr3);
+
+				// var person = {
+				// 	firstName : "Hello ",
+				// 	lastName : "World",
+				// 	age : 30,
+				// 	func:function(){
+				// 		return this.firstName + this.lastName;
+				// 	}
+				// }
+
+				// document.write(person.func()+"<br/>");
+
+
+				function checked(){
+					var txt;
+					var coding = document.getElementById("codeText").value;
+
+					switch (coding) {
+						case "java":
+							txt = "java";
+							break;
+						case "php":
+							txt = "php";
+							break;
+						case "c++":
+							txt = "c++";
+							break;
+						default:
+							txt = "JS";
+							// break;
+					}
+					document.getElementById("show").innerHTML = txt;
+				}
 
 			</script>
 		</div>
