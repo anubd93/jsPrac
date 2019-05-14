@@ -18,11 +18,19 @@
 			<div id="show">
 				
 			</div>
-			<input id="codeText" type="text">
-			<button onclick="checked()">
+			<!-- <input id="codeText" type="text"> -->
+			<!-- <button onclick="checked()">
 				CHECK
-			</button>
+			</button> -->
+			<!-- <button onclick="checkEvent()">CHECK HERE</button> -->
+			<button ondblclick="checkEvent()">CHECK HERE</button>
+			<!-- <button onmouseover="checkEvent()">CHECK HERE</button> -->
 			<script type="text/javascript">
+
+				function checkEvent(){
+					console.log("Event is here...");
+				}
+
 				// var a = 10;
 				// var b = 15;
 				// var helloWorld = a+b;
@@ -61,26 +69,28 @@
 				// document.write(person.func()+"<br/>");
 
 
-				function checked(){
-					var txt;
-					var coding = document.getElementById("codeText").value;
+				// function checked(){
+				// 	var txt;
+				// 	var coding = document.getElementById("codeText").value;
 
-					switch (coding) {
-						case "java":
-							txt = "java";
-							break;
-						case "php":
-							txt = "php";
-							break;
-						case "c++":
-							txt = "c++";
-							break;
-						default:
-							txt = "JS";
-							// break;
-					}
-					document.getElementById("show").innerHTML = txt;
-				}
+				// 	switch (coding) {
+				// 		case "java":
+				// 			txt = "java";
+				// 			break;
+				// 		case "php":
+				// 			txt = "php";
+				// 			break;
+				// 		case "c++":
+				// 			txt = "c++";
+				// 			break;
+				// 		default:
+				// 			txt = "JS";
+				// 			// break;
+				// 	}
+				// 	document.getElementById("show").innerHTML = txt;
+				// }
+
+
 
 			</script>
 		</div>
