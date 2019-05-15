@@ -7,14 +7,14 @@
 </head>
 <body>
 	<section class="content">
-		<div class="header">
+		<header class="header">
 			<h2>
 				<script type="text/javascript">
 					document.write("HEADER");	
 				</script>
 			</h2>
-		</div>
-		<div class="maincontent">
+		</header>
+		<section class="maincontent">
 			<div id="show">
 				
 			</div>
@@ -25,6 +25,11 @@
 			<!-- <button onclick="checkEvent()">CHECK HERE</button> -->
 			<button ondblclick="checkEvent()">CHECK HERE</button>
 			<!-- <button onmouseover="checkEvent()">CHECK HERE</button> -->
+
+			<div id="hello">
+				Hello World!!!<hr/>
+			</div>
+
 			<script type="text/javascript">
 
 				function checkEvent(){
@@ -90,17 +95,23 @@
 				// 	document.getElementById("show").innerHTML = txt;
 				// }
 
+				var div1 = document.getElementById("hello").innerText;
+				var div2 = document.querySelector("div").innerText;
+				var div3 = document.querySelectorAll("div")[0].innerText;
+				var div4 = document.getElementsByTagName("div")[0].innerText;
+
+				document.write(div1+"<br/>"+div2+"<br/>"+div3+"<br/>"+div4+"<br/>");
 
 
 			</script>
-		</div>
-		<div class="footer">
+		</section>
+		<footer class="footer">
 			<h2>
 				<script type="text/javascript">
 					document.write("FOOTER");	
 				</script>
 			</h2>
-		</div>
+		</footer>
 	</section>
 </body>
 </html>
