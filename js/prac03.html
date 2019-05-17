@@ -24,9 +24,26 @@
 			<div id="hello">
 				Hello World!!!<hr/>
 			</div>
+			<div id="world" onclick="test(this)">
+				World!!!<hr/>
+			</div>
 
 			<script type="text/javascript">
-
+				// function test(event){
+				// 	alert(event);
+				// 	alert(this);
+				// }
+				function test(){
+					var a = 200;
+					this.x = 300;
+					this.y = 400;
+					this.z = function(){
+						return this.x+this.y;
+					}
+				}
+				var ts = new test();
+				document.write(ts.z());
+				// test();
 			</script>
 		</section>
 		<footer class="footer">
