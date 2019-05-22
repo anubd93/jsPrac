@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Hello</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<section class="content">
+		<header class="header">
+			<h2>
+				<script type="text/javascript">
+					document.write("HEADER");	
+				</script>
+			</h2>
+		</header>
+		<section class="maincontent">
+			<div id="show">
+				
+			</div>
+			
+			<button ondblclick="checkEvent()">CHECK HERE</button>
+
+			<div id="hello">
+				Hello World!!!<hr/>
+			</div>
+			<div id="world" onclick="test(this)">
+				World!!!<hr/>
+			</div>
+
+			<script type="text/javascript">
+				function totalNum(a){
+
+					x = 20;
+					total = function(){
+						return x+a;
+					};
+
+					this.result = function(){
+						this.sum = total();
+						return "Result is "+this.sum; 
+					};
+				}
+
+				// var tn = new totalNum(40);
+				// document.write(total(40));
+
+				var tn = new totalNum(10);
+				document.write("<br/>"+tn.result());
+
+
+			</script>
+		</section>
+		<footer class="footer">
+			<h2>
+				<script type="text/javascript">
+					document.write("FOOTER");	
+				</script>
+			</h2>
+		</footer>
+	</section>
+</body>
+</html>
