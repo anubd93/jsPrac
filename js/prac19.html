@@ -29,25 +29,25 @@
 			</div>
 
 			<script type="text/javascript">
-				function totalNum(a, b){
-					this.x = a;
-					this.y = b;
-					this.sum = function(){
-						return this.x+this.y;
-					}
-				}
-				function productNum(a, b){
-					this.x = a;
-					this.y = b;
-					this.product = function(){
-						return this.x * this.y;
-					}
+				function totalNum(a){
+
+					x = 20;
+					total = function(){
+						return x+a;
+					};
+
+					this.result = function(){
+						this.sum = total();
+						return "Result is "+this.sum; 
+					};
 				}
 
-				totalNum.prototype = new productNum();
+				// var tn = new totalNum(40);
+				// document.write(total(40));
 
-				var tn = new totalNum(10, 5);
-				document.write("<br/>"+tn.product());
+				var tn = new totalNum(10);
+				document.write("<br/>"+tn.result());
+
 
 			</script>
 		</section>
