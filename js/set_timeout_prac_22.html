@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Hello</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<section class="content">
+		<header class="header">
+			<h2>
+				<script type="text/javascript">
+					document.write("HEADER");	
+				</script>
+			</h2>
+		</header>
+		<section class="maincontent">
+			<div id="show">
+				
+			</div>
+			
+			<button ondblclick="checkEvent()">CHECK HERE</button>
+
+			<div id="hello">
+				Hello World!!!<hr/>
+			</div>
+			<div id="world" onclick="test(this)">
+				World!!!<hr/>
+			</div>
+
+			<script type="text/javascript">
+				// setTimeout();
+				// clearTimeout();
+				var timeout;
+				function timeoutTrigger(){
+					document.getElementById("show").innerHTML = "the time has been trigered after 3 sec...";
+				}
+				function timeinit(){
+					timeout = setTimeout("timeoutTrigger()",3000);
+					document.getElementById("show").innerHTML = "the time has been started";
+				}
+				function timeClear(){
+					clearTimeout(timeout);
+					document.getElementById("show").innerHTML = "the time has been cleared";
+				}
+			</script>
+		</section>
+		<div>
+			<input type="button" value="test timeout" onclick="timeinit()" name="">
+			<input type="button" value="clear timeout" onclick="timeClear()" name="">
+		</div>	
+		<div id="show">
+			
+		</div>
+		<footer class="footer">
+			<h2>
+				<script type="text/javascript">
+					document.write("FOOTER");	
+				</script>
+			</h2>
+		</footer>
+	</section>
+</body>
+</html>
