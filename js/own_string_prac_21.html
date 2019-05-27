@@ -1,0 +1,66 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Hello</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<section class="content">
+		<header class="header">
+			<h2>
+				<script type="text/javascript">
+					document.write("HEADER");	
+				</script>
+			</h2>
+		</header>
+		<section class="maincontent">
+			<div id="show">
+				
+			</div>
+			
+			<button ondblclick="checkEvent()">CHECK HERE</button>
+
+			<div id="hello">
+				Hello World!!!<hr/>
+			</div>
+			<div id="world" onclick="test(this)">
+				World!!!<hr/>
+			</div>
+
+			<script type="text/javascript">
+				// function reverseMe(s){
+				// 	return s.split("").reverse().join("");
+				// }
+				String.prototype.reverseMe = function(){
+					var s = "";
+					var i = this.length;
+					while (i>0) {
+						s += this.substring(i-1, i);
+						i--;
+					}
+					return s;
+				}
+				var x = "A B C D";
+				document.write(x.reverseMe());
+
+				// function mySubstring(){
+				// 	var str = "Hello World";
+				// 	var res = str.substring(2,5);
+				// 	document.write(res);
+				// }
+				// mySubstring();
+
+
+			</script>
+		</section>
+		<footer class="footer">
+			<h2>
+				<script type="text/javascript">
+					document.write("FOOTER");	
+				</script>
+			</h2>
+		</footer>
+	</section>
+</body>
+</html>
