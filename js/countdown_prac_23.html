@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Hello</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<section class="content">
+		<header class="header">
+			<h2>
+				<script type="text/javascript">
+					document.write("HEADER");	
+				</script>
+			</h2>
+		</header>
+		<section class="maincontent">
+			<div id="show">
+				
+			</div>
+			
+			<button ondblclick="checkEvent()">CHECK HERE</button>
+
+			<div id="hello">
+				Hello World!!!<hr/>
+			</div>
+			<div id="world" onclick="test(this)">
+				World!!!<hr/>
+			</div>
+
+			<script type="text/javascript">
+				// setTimeout();
+				// clearTimeout();
+				var countDown;
+				var countDownNumber;
+
+				function countDownInit(){
+					countDownNumber = 11;
+					countDownTrigger();
+				}
+
+				function countDownTrigger(){
+					if (countDownNumber > 0) {
+						countDownNumber--;
+						document.getElementById("show").innerHTML = countDownNumber;
+						if (countDownNumber > 0) {
+							countDown = timeout = setTimeout("countDownTrigger()",2000);
+						}
+					}
+				}
+
+				// function timeinit(){
+				// 	timeout = setTimeout("timeoutTrigger()",3000);
+					
+				// }
+
+				function countDownClear(){
+					clearTimeout(countDown);
+					// document.getElementById("show").innerHTML = "the countdown has been cleared";
+				}
+			</script>
+		</section>
+		<div>
+			<input type="button" value="Start countdown" onclick="countDownInit()" name="">
+			<input type="button" value="Stop countdown" onclick="countDownClear()" name="">
+		</div>	
+		<div id="show">
+			
+		</div>
+		<footer class="footer">
+			<h2>
+				<script type="text/javascript">
+					document.write("FOOTER");	
+				</script>
+			</h2>
+		</footer>
+	</section>
+</body>
+</html>
