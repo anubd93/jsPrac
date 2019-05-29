@@ -8,36 +8,33 @@
 <body>
 	<section class="content">
 		<header class="header">
-			<h2>
-				<script type="text/javascript">
-					document.write("HEADER");	
-				</script>
-			</h2>
 		</header>
 		<section class="maincontent">
 			<div id="show">
 				
 			</div>
-			
-			<button ondblclick="checkEvent()">CHECK HERE</button>
 
-			<div id="hello">
-				Hello World!!!<hr/>
-			</div>
-			<div id="world" onclick="test(this)">
-				World!!!<hr/>
+			<div>
+				<span id="hour"></span>:
+				<span id="min"></span>:
+				<span id="sec"></span>
 			</div>
 
 			<script type="text/javascript">
-				// var i = 0;
-				// var interval = setInterval(function(){
-				// 	i++;
-				// 	alert("OK");
-				// 	if (i==3) {
-				// 		clearInterval(interval);
-				// 	}
-				// }, 3000);
-				// clearInterval(interval);
+				function clock() {
+					var date = new Date();
+
+					var hour = date.getHours();
+					var min = date.getMinutes();
+					var sec = date.getSeconds();
+
+					document.getElementById("hour").innerHTML = hour;
+					document.getElementById("min").innerHTML = min;
+					document.getElementById("sec").innerHTML = sec;
+				}
+
+				setInterval(clock,1000);
+
 			</script>
 		</section>
 		
@@ -46,8 +43,7 @@
 		</div>
 		<footer class="footer">
 			<h2>
-				<script type="text/javascript">
-					document.write("FOOTER");	
+				<script type="text/javascript">	
 				</script>
 			</h2>
 		</footer>
